@@ -1,0 +1,19 @@
+metastore_direct:
+  uri: "jdbc:mysql://c3110-node4.coelab.cloudera.com:3306/hive"
+  connectionProperties:
+    user: "hive"
+    password: "hadoop"
+  connectionPool:
+    min: 3
+    max: 5
+hs2:
+  uri: "jdbc:hive2://c3110-node4.coelab.cloudera.com:10000"
+  connectionPool:
+    min: 3
+    max: 5
+parallelism: 4
+queries:
+  db_tbl_count:
+    parameters:
+      dbs:
+        override: "%"
